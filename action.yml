@@ -7,8 +7,6 @@ branding:
 runs:
   using: docker
   image: Dockerfile
-  args:
-    -v ${{ inputs.keyStore }}:/opt/java/openjdk/lib/security/cacert
 inputs:  
   args:
     description: Additional arguments to the sonar-scanner
@@ -20,4 +18,3 @@ inputs:
   keyStore:
     description: Set the keyStore path
     required: false
-    default: /opt/java/openjdk/lib/security/cacert

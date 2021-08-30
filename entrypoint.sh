@@ -22,6 +22,11 @@ if [[ -f "${INPUT_PROJECTBASEDIR%/}build.gradle" ]]; then
   exit 1
 fi
 
+if [[ -f "${INPUT_KEYSTORE}" ]]; then
+ cp "${INPUT_KEYSTORE}" "/opt/java/openjdk/lib/security/cacert"
+fi
+
+
 unset JAVA_HOME
 
 sonar-scanner -Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR} ${INPUT_ARGS}
