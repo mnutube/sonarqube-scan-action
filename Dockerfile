@@ -1,8 +1,8 @@
 FROM sonarsource/sonar-scanner-cli:4.6
 
 LABEL version="1.0.0" \
-      repository="https://github.com/sonarsource/sonarqube-scan-action" \
-      homepage="https://github.com/sonarsource/sonarqube-scan-action" \
+      repository="https://github.com/mnutube/sonarqube-scan-action" \
+      homepage="https://github.com/mnutube/sonarqube-scan-action" \
       maintainer="SonarSource" \
       com.github.actions.name="SonarQube Scan" \
       com.github.actions.description="Scan your code with SonarQube to detect Bugs, Vulnerabilities and Code Smells in up to 27 programming languages!" \

@@ -7,7 +7,9 @@ branding:
 runs:
   using: docker
   image: Dockerfile
-inputs:
+  args:
+    -v ${{inputs.keyStore}}:/opt/java/openjdk/lib/security/cacert
+inputs:  
   args:
     description: Additional arguments to the sonar-scanner
     required: false
@@ -15,3 +17,7 @@ inputs:
     description: Set the sonar.projectBaseDir analysis property
     required: false
     default: .
+  keyStore:
+    description: Set the keyStore path
+    required: false
+    default: /opt/java/openjdk/lib/security/cacert
