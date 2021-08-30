@@ -8,7 +8,7 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    -v ${{inputs.keyStore}}:/opt/java/openjdk/lib/security/cacert
+    -v ${{ inputs.keyStore }}:/opt/java/openjdk/lib/security/cacert
 inputs:  
   args:
     description: Additional arguments to the sonar-scanner
