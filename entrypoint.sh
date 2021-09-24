@@ -24,7 +24,7 @@ fi
 
 if [[ -f "${INPUT_KEYSTORE}" ]]; then
  echo "Copy ${INPUT_KEYSTORE} to /opt/java/openjdk/lib/security/cacerts"
- cp "${INPUT_KEYSTORE}" "/opt/java/openjdk/lib/security/cacerts"
+ cp "${INPUT_KEYSTORE}" "%JAVA_HOME%/lib/security/cacerts"
 fi
 
 
