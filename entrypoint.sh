@@ -23,8 +23,8 @@ if [[ -f "${INPUT_PROJECTBASEDIR%/}build.gradle" ]]; then
 fi
 
 if [[ -f "${INPUT_KEYSTORE}" ]]; then
- echo "Copy ${INPUT_KEYSTORE} to /opt/java/openjdk/lib/security/cacerts"
- cp "${INPUT_KEYSTORE}" "%JAVA_HOME%/lib/security/cacerts"
+ echo "Copy ${INPUT_KEYSTORE} to ${JAVA_HOME}/lib/security/cacerts"
+ cp "${INPUT_KEYSTORE}" "${JAVA_HOME}/lib/security/cacerts"
 fi
 
 
